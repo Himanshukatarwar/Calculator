@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="calc.css">
+  <link rel="stylesheet" href="" id="alternate">
+
+</head>
+<body>
+  <div class="calc">
+    <div class="head-no">1 2 3</div>
+    <div class="header">
+      <div class="head-text">Calc</div>
+      <div id="text-theme">Theme</div>
+      <div class="tw-toggle">
+        <input checked type="radio" name="toggle" value="1" onclick="themechange(this)">
+        <label class="toggle toggle-yes"></label>
+        <input  type="radio" name="toggle" value="2" onclick="themechange(this)">
+        <label class="toggle toggle-yes"></label>
+        <input type="radio" name="toggle" value="3" onclick="themechange(this)">
+        <label class="toggle toggle-yes"></label>
+        <span></span>  
+      </div>
+    </div>
+
+    <input class = "display-box" type = "text" id = "result" disabled />
+
+    <div class="keys">
+      <input type="button" value="7" class="btn" onclick="display('7')">
+      <input type="button" value="8" class="btn" onclick="display('8')">
+      <input type="button" value="9" class="btn" onclick="display('9')">
+      <input type="button" value="DEL" class="btn" onclick="del()">
+      <input type="button" value="4" class="btn" onclick="display('4')">
+      <input type="button" value="5" class="btn" onclick="display('5')">
+      <input type="button" value="6" class="btn" onclick="display('6')">
+      <input type="button" value="+" class="btn" onclick="display('+')">
+      <input type="button" value="1" class="btn" onclick="display('1')">
+      <input type="button" value="2" class="btn" onclick="display('2')">
+      <input type="button" value="3" class="btn" onclick="display('3')">
+      <input type="button" value="-" class="btn" onclick="display('-')">
+      <input type="button" value="." class="btn" onclick="display('.')">
+      <input type="button" value="0" class="btn" onclick="display('0')">
+      <input type="button" value="/" class="btn" onclick="display('/')">
+      <input type="button" value="*" class="btn" onclick="display('*')">
+      <input type="button" value="reset" class="btn reset" onclick="clearall()">
+      <input type="button" value="=" class="btn equal" onclick="calculate()">
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Himanshu katarwar</a>.
+    </div>
+  </div> 
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

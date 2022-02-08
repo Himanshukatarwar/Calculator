@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+    --bg-theme: hsl(0, 0%, 90%);
+    --bg-toggle-keypad: hsl(0, 5%, 81%);
+    --bg-screen: hsl(0, 0%, 93%);
+    --bg-del-reset-key:  hsl(185, 42%, 37%);
+    --key-shadow-del-reset: hsl(185, 58%, 25%);
+    --bg-keys: hsl(45, 7%, 89%);
+    --key-shadow-keys:  hsl(35, 11%, 61%);
+    --bg-result-toggle-key: hsl(25, 98%, 40%);
+    --key-shadow-result: hsl(25, 99%, 27%); 
+    --text-color: hsl(60, 10%, 19%); 
+}
+body{
+  background-color: var(--bg-theme);
+  font-family: 'Spartan', sans-serif;
+  color: var(--text-color);
+
+}
+
+.calc{
+  position: absolute;
+  display: inline-block;
+  margin: 7% 17%;
+  width: 49rem;
+  height: 30rem;
+  
+
+}
+.head-text{
+  font-size:x-large;
+
+}
+#text-theme{
+  text-align: right;
+  flex-grow: 3;
+  font-size: 20px;
+  padding:0.2rem;
+}
+.display-box{
+  margin-left:30%;
+  border-radius: 10px;
+  background-color: var(--bg-toggle-keypad);
+  height: 15%;
+  width:67%;
+  margin-top:2%;
+  color: var(--text-color);
+  
+}
+input[type='text']{
+  font-size:20px;
+}
+.keys{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 128px);
+  grid-template-rows: repeat(5, 80px);
+  background-color: var(--bg-toggle-keypad);
+  padding: 15px 10px;
+  border-radius: 10px;
+  width:fit-content;
+  margin-left: 30%;
+  margin-top:2%;
+  
+
+  
+}
+.btn {
+  width: 81%;
+  height: 58px;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 20px;
+  color: var(--text-color);
+  box-shadow: 0 1px var(--key-shadow-keys);
+  border: none;
+}
+.keys > .btn {
+  margin: 0 8px;
+  padding: 8px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--bg-keys);
+  color: var(--text-color);
+  box-shadow: 0 5px var(--key-shadow-keys);
+}
+.btn:nth-child(17), .btn:nth-child(4) {
+  background-color: var(--bg-del-reset-key);
+  box-shadow: 0 5px var(--key-shadow-del-reset);
+  color: var(--bg-keys);
+  font-size: 18px;
+  padding: 17px 0;
+}
+.btn:nth-child(18) {
+  background-color: var(--bg-result-toggle-key);
+  box-shadow: 0 5px var(--key-shadow-result);
+  color: white;
+}
+
+.equal{
+  background-color: var(--bg-result-toggle-key);
+  box-shadow: 2px var(--key-shadow-result);
+  grid-column: span 2;
+  width: 92%;
+}
+.reset{
+
+  background-color: var(--bg-theme);
+  color:var(--text-color);
+  grid-column: span 2 ;
+  width: 95%;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between; 
+  padding: 0 14px 0 0;
+  margin-left:30%;
+}
+.head-no{
+  text-align: right;
+  margin-right: 1.7rem;
+  font-size: 20px;
+  word-spacing: 11px;
+}
+#result{
+  text-align: right;
+  font-size: x-large;
+}
+
+
+.tw-toggle{
+  display: inline-block;
+  border-radius: 20px;
+  padding: 3px 2px;
+  width: max-content;
+  height: fit-content;
+  position: relative;
+  background-color: var(--bg-toggle-keypad);
+}
+.tw-toggle input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 4;
+
+}
+.tw-toggle span {
+  border-radius: 50%;
+  background: var(--bg-result-toggle-key);
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  display:inline-block;
+  left : 2px;
+  top: 4px;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.tw-toggle input[value ="1"]:checked ~ span{
+  left:2px;
+}
+.tw-toggle input[value ="3"]:checked ~ span{
+  left: 54px;
+}
+.tw-toggle input[value = "2"]:checked ~ span{
+  left: 30px;
+  
+}
+.attribution { 
+    font-size: 11px; 
+    margin-left: 30%;
+    padding: 2px 5px;
+    text-align: center;
+    margin-top: 10px;
+    
+    
+  }
+  
+  
+  
+  .attribution a { color: var(--text-color) }
+  
